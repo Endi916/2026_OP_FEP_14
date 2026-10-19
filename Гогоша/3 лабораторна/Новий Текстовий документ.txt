@@ -1,0 +1,68 @@
+1)
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+int number = 42;
+
+  printf("Decimal: %d\n", number);
+    printf("Octal: %o\n", number);
+double value = 123.456;
+
+    printf("%f\n", value);
+    printf("%e\n", value);
+    printf("%g\n", value);
+       char letter = 'k';
+    char text[4] = "abc";
+
+    printf("%c\n", letter);
+    printf("%s\n", text);
+    printf("%p\n", (void *)text);
+    printf("Hexadecimal: %x\n", number);
+    printf("Binary: %b\n", (unsigned int)number);
+    return 0;
+}
+
+2)
+
+#include <stdio.h>
+
+int main(void)
+{
+    char surname1[30], email1[50], color1[20];
+    char surname2[30], email2[50], color2[20];
+
+    printf("Person 1\n");
+
+    printf("Enter surname: ");
+    scanf("%29s", surname1);
+
+    printf("Enter email: ");
+    scanf("%49s", email1);
+
+    printf("Enter favorite color: ");
+    scanf("%19s", color1);
+
+    printf("\nPerson 2\n");
+
+    printf("Enter surname: ");
+    scanf("%29s", surname2);
+
+    printf("Enter email: ");
+    scanf("%49s", email2);
+
+    printf("Enter favorite color: ");
+    scanf("%19s", color2);
+
+    printf("\n%-4s %-29s %-49s %-19s\n",
+           "No", "Surname", "Email", "Color");
+
+    printf("%-4d %-29s %-49s %-19s\n",
+           1, surname1, email1, color1);
+
+    printf("%-4d %-29s %-49s %-19s\n",
+           2, surname2, email2, color2);
+
+    return 0;
+}
