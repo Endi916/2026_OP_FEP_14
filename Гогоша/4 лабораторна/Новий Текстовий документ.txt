@@ -1,0 +1,108 @@
+1)
+#include <stdio.h>
+
+int main(void)
+{
+    int a = 10;
+    int b = 3;
+
+    printf("a = %d, b = %d\n", a, b);
+
+    printf("Addition: %d\n", a + b);
+    printf("Subtraction: %d\n", a - b);
+    printf("Multiplication: %d\n", a * b);
+    printf("Division: %d\n", a / b);
+    printf("Remainder: %d\n", a % b);
+    printf("Unary minus: %d\n", -a);
+    printf("Unary plus: %d\n", +a);
+
+    a++;
+    printf("After a++: %d\n", a);
+
+    a--;
+    printf("After a--: %d\n", a);
+        printf("\nComparison:\n");
+
+    printf("a > b: %d\n", a > b);
+    printf("a >= b: %d\n", a >= b);
+    printf("a < b: %d\n", a < b);
+    printf("a <= b: %d\n", a <= b);
+    printf("a == b: %d\n", a == b);
+    printf("a != b: %d\n", a != b);
+        printf("\nLogical operations:\n");
+
+    printf("AND: %d\n", (a > b) && (b > 0));
+    printf("OR: %d\n", (a < b) || (b > 0));
+    printf("NOT: %d\n", !(a > b));
+       unsigned int x = 10;
+    unsigned int y = 3;
+
+    printf("\nBitwise operations:\n");
+    printf("x = %b\n", x);
+    printf("y = %b\n", y);
+
+    printf("AND: %b\n", x & y);
+    printf("OR: %b\n", x | y);
+    printf("XOR: %b\n", x ^ y);
+    printf("NOT: %b\n", ~x);
+    printf("Right shift: %b\n", x >> 1);
+    printf("Left shift: %b\n", x << 1); 
+    return 0;
+}
+2)#include <stdio.h>
+
+int main(void)
+{
+    int number;
+    int *pointer = &number;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    printf("Address: %p\n", (void *)pointer);
+    printf("Value: %d\n", *pointer);
+
+    return 0;
+}
+3)
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+    double a, b, c;
+    double D, x1, x2;
+
+    printf("Enter a, b, c: ");
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    if (a == 0)
+    {
+        printf("This is not a quadratic equation.\n");
+    }
+    else
+    {
+        D = b * b - 4 * a * c;
+        printf("Discriminant: %f\n", D);
+
+        if (D > 0)
+        {
+            x1 = (-b + sqrt(D)) / (2 * a);
+            x2 = (-b - sqrt(D)) / (2 * a);
+
+            printf("x1 = %f\n", x1);
+            printf("x2 = %f\n", x2);
+        }
+        else if (D == 0)
+        {
+            x1 = -b / (2 * a);
+            printf("x = %f\n", x1);
+        }
+        else
+        {
+            printf("No real roots.\n");
+        }
+    }
+
+    return 0;
+}
